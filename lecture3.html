@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture 2 - Lists & Tables</title>
+</head>
+
+<body>
+    <header>
+        <p><a href="index.html">← Back to Home</a></p>
+    </header>
+    <!-- Navigation -->
+    <h1>Lecture 3: Lists & Tables</h1>
+    <nav>
+        <a href="lecture1.html">1</a> |
+        <a href="lecture2.html">2</a> |
+        <a href="lecture3.html">3</a> |
+        <a href="lecture4.html">4</a> |
+        <a href="lecture5.html">5</a> |
+        <a href="lecture6.html">6</a>
+    </nav>
+    <hr>
+
+
+
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>HTML provides several ways to organize and display content. Two of the most important structures are
+                lists and tables.</p>
+        </section>
+
+        <section>
+            <h2>List Recap</h2>
+            <p>HTML offers three types of lists:</p>
+            <h3>Ordered List</h3>
+            <ol>
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+            </ol>
+
+            <h3>Unordered List</h3>
+            <ul>
+                <li>Bullet point item</li>
+                <li>Another bullet point</li>
+                <li>Yet another bullet</li>
+            </ul>
+
+            <h3>Definition List</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>HyperText Markup Language</dd>
+
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h2>Nested Lists</h2>
+            <p>Lists can be nested inside other lists to create hierarchical structures.</p>
+
+            <h3>Example 1: Basic Nested List</h3>
+            <ul>
+                <li>Main item 1
+                    <ul>
+                        <li>Sub item 1.1</li>
+                        <li>Sub item 1.2</li>
+                    </ul>
+                </li>
+                <li>Main item 2
+                    <ul>
+                        <li>Sub item 2.1</li>
+                        <li>Sub item 2.2</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Example 2: Mixed List Types</h3>
+            <ol>
+                <li>First topic
+                    <ul>
+                        <li>Subtopic A</li>
+                        <li>Subtopic B</li>
+                    </ul>
+                </li>
+                <li>Second topic
+                    <ul>
+                        <li>Subtopic X</li>
+                        <li>Subtopic Y</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>Example 3: Complex Nesting</h3>
+            <ul>
+                <li>Category A
+                    <ol>
+                        <li>Item A1
+                            <ul>
+                                <li>Detail A1a</li>
+                                <li>Detail A1b</li>
+                            </ul>
+                        </li>
+                        <li>Item A2</li>
+                    </ol>
+                </li>
+                <li>Category B
+                    <ol>
+                        <li>Item B1</li>
+                        <li>Item B2</li>
+                    </ol>
+                </li>
+            </ul>
+
+            <h3>Example 4: Multi-level Nesting</h3>
+            <ul>
+                <li>Level 1
+                    <ul>
+                        <li>Level 2
+                            <ul>
+                                <li>Level 3
+                                    <ul>
+                                        <li>Level 4</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Lists with Heading</h2>
+            <p>You can combine headings with lists for better content organization.</p>
+
+            <h3>Programming Languages</h3>
+            <ul>
+                <li>Web Development
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </li>
+                <li>Data Science
+                    <ul>
+                        <li>Python</li>
+                        <li>R</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Introduction to HTML Tables</h2>
+            <p>Tables are used to display data in a grid format with rows and columns.</p>
+        </section>
+
+        <section>
+            <h2>Rows and Columns</h2>
+            <p>Tables consist of rows (horizontal) and columns (vertical). Each intersection is called a cell.</p>
+        </section>
+
+        <section>
+            <h2>Table Example 1: Basic Table</h2>
+            <table border="1">
+                <tr>
+                    <td>Row 1, Cell 1</td>
+                    <td>Row 1, Cell 2</td>
+                </tr>
+                <tr>
+                    <td>Row 2, Cell 1</td>
+                    <td>Row 2, Cell 2</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Table Tags</h2>
+            <p>The <code>&lt;table&gt;</code> tag defines a table. Inside it, we use:</p>
+            <ul>
+                <li><code>&lt;tr&gt;</code> for table rows</li>
+                <li><code>&lt;td&gt;</code> for standard cells</li>
+                <li><code>&lt;th&gt;</code> for header cells</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Adding Borders to a Table</h2>
+            <p>Use the border attribute to add borders to your table:</p>
+            <table border="1">
+                <tr>
+                    <td>Cell with border</td>
+                    <td>Another cell</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Table Example 2: Table with Headers</h2>
+            <table border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>25</td>
+                    <td>USA</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>30</td>
+                    <td>Spain</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Table Header, Body, and Footer</h2>
+            <p>For better structure, tables can be divided into header, body, and footer:</p>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Laptop</td>
+                        <td>$999</td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>$599</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total</td>
+                        <td>$1598</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section>
+            <h2>Understanding Colspan</h2>
+            <p>Colspan allows a cell to span multiple columns:</p>
+            <table border="1">
+                <tr>
+                    <th colspan="2">Personal Information</th>
+                </tr>
+                <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Table Example 4: Using Colspan</h2>
+            <table border="1">
+                <tr>
+                    <th colspan="3">Quarterly Sales</th>
+                </tr>
+                <tr>
+                    <th>Product</th>
+                    <th>Q1</th>
+                    <th>Q2</th>
+                </tr>
+                <tr>
+                    <td>Widgets</td>
+                    <td>$1000</td>
+                    <td>$1200</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Understanding Rowspan</h2>
+            <p>Rowspan allows a cell to span multiple rows:</p>
+            <table border="1">
+                <tr>
+                    <th rowspan="2">Name</th>
+                    <th>Age</th>
+                </tr>
+                <tr>
+                    <td>25</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Table Example 5: Advanced Table</h2>
+            <table border="1">
+                <tr>
+                    <th rowspan="2">Category</th>
+                    <th colspan="2">Sales</th>
+                </tr>
+                <tr>
+                    <th>Q1</th>
+                    <th>Q2</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Electronics</td>
+                    <td>$5000</td>
+                    <td>$6000</td>
+                </tr>
+                <tr>
+                    <td>$3000</td>
+                    <td>$4000</td>
+                </tr>
+                <tr>
+                    <td>Clothing</td>
+                    <td>$2000</td>
+                    <td>$2500</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Homework</h2>
+            <p>Practice creating different types of lists and tables:</p>
+            <ol>
+                <li>Create a nested list with at least 3 levels</li>
+                <li>Make a table with headers and footers</li>
+                <li>Create a table using both colspan and rowspan</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>This tutorial covered HTML lists and tables. Practice these concepts to become proficient in organizing
+            content on web pages.</p>
+        <p>Remember to validate your HTML code using the W3C Validator.</p>
+        
+    <p>This lecture covered Lists, Nested Lists, and HTML Tables with examples.</p>
+        <p>Lecture 3 Complete • <a href="index.html">Home</a> | <a href="lecture4.html">Next →</a></p>
+        
+
+    </footer>
+
+    <center>
+        <p><strong>Progress:</strong></p>
+        <progress value="3" max="6">3/6</progress>
+</center>
+
+</body>
+
+</html>

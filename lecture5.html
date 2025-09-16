@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms Tutorial</title>
+</head>
+<body>
+     <header>
+    <h1>Lecture 5:HTML Forms Tutorial</h1>
+    <p>Learn how to create and use HTML forms to collect user input</p>
+    <p><a href="index.html">← Back to Home</a></p>
+  </header>
+
+  <nav>
+    <a href="lecture1.html">1</a> |
+    <a href="lecture2.html">2</a> |
+    <a href="lecture3.html">3</a> |
+    <a href="lecture4.html">4</a> |
+    <a href="lecture5.html">5</a> |
+    <a href="lecture6.html">6</a>
+  </nav>
+
+    <main>
+        <section>
+            <h2>What is an HTML Form?</h2>
+            <p>HTML forms are used to collect user input and send it to a server for processing.</p>
+            <p>Forms contain various input elements like text fields, checkboxes, radio buttons, and more.</p>
+        </section>
+
+        <section>
+            <h2>Form Structure</h2>
+            <h3>form Tag</h3>
+            <p>The <code>&lt;form&gt;</code> tag defines an HTML form that contains input elements.</p>
+            <pre>
+&lt;form action="/submit" method="post"&gt;
+  &lt;!-- Form elements go here --&gt;
+&lt;/form&gt;
+            </pre>
+
+            <h3>input Tag</h3>
+            <p>The <code>&lt;input&gt;</code> tag creates various form controls depending on its type attribute.</p>
+            <pre>
+&lt;input type="text" name="username"&gt;
+            </pre>
+
+            <h3>label Tag</h3>
+            <p>The <code>&lt;label&gt;</code> tag defines a label for an input element, improving accessibility.</p>
+            <pre>
+&lt;label for="username"&gt;Username:&lt;/label&gt;
+&lt;input type="text" id="username" name="username"&gt;
+            </pre>
+        </section>
+
+        <section>
+            <h2>Name & Value Attributes</h2>
+            <p>The <code>name</code> attribute identifies the data when submitted to the server.</p>
+            <p>The <code>value</code> attribute specifies the initial value for an input field.</p>
+            <pre>
+&lt;input type="text" name="firstname" value="John"&gt;
+            </pre>
+        </section>
+
+        <section>
+            <h2>Radio Buttons</h2>
+            <p>Radio buttons allow users to select exactly one option from a group.</p>
+            <pre>
+&lt;input type="radio" id="male" name="gender" value="male"&gt;
+&lt;label for="male"&gt;Male&lt;/label&gt;
+
+&lt;input type="radio" id="female" name="gender" value="female"&gt;
+&lt;label for="female"&gt;Female&lt;/label&gt;
+            </pre>
+
+            <h3>for Attribute</h3>
+            <p>The <code>for</code> attribute of a label should match the <code>id</code> attribute of the input it describes.</p>
+        </section>
+
+        <section>
+            <h2>Checkboxes</h2>
+            <p>Checkboxes allow users to select zero or more options from a set.</p>
+            <pre>
+&lt;input type="checkbox" id="subscribe" name="subscribe" value="yes"&gt;
+&lt;label for="subscribe"&gt;Subscribe to newsletter&lt;/label&gt;
+            </pre>
+        </section>
+
+        <section>
+            <h2>Other Input Types</h2>
+            
+            <h3>Placeholder Attribute</h3>
+            <p>Provides a hint about the expected value of an input field.</p>
+            <pre>
+&lt;input type="text" placeholder="Enter your name"&gt;
+            </pre>
+
+            <h3>Date Input</h3>
+            <pre>
+&lt;label for="birthday"&gt;Birthday:&lt;/label&gt;
+&lt;input type="date" id="birthday" name="birthday"&gt;
+            </pre>
+
+            <h3>File Input</h3>
+            <pre>
+&lt;label for="myfile"&gt;Select a file:&lt;/label&gt;
+&lt;input type="file" id="myfile" name="myfile"&gt;
+            </pre>
+
+            <h3>Email Input</h3>
+            <pre>
+&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email" name="email"&gt;
+            </pre>
+
+            <h3>Telephone Input</h3>
+            <pre>
+&lt;label for="phone"&gt;Phone:&lt;/label&gt;
+&lt;input type="tel" id="phone" name="phone"&gt;
+            </pre>
+        </section>
+
+        <section>
+            <h2>Textarea Tag</h2>
+            <p>The <code>&lt;textarea&gt;</code> tag creates a multi-line text input control.</p>
+            <pre>
+&lt;label for="message"&gt;Message:&lt;/label&gt;
+&lt;textarea id="message" name="message" rows="4" cols="50"&gt;
+Default text goes here
+&lt;/textarea&gt;
+            </pre>
+        </section>
+
+        <section>
+            <h2>Select and Option Tags</h2>
+            <p>The <code>&lt;select&gt;</code> tag creates a drop-down list.</p>
+            <p>The <code>&lt;option&gt;</code> tag defines an option in the drop-down list.</p>
+            <pre>
+&lt;label for="cars"&gt;Choose a car:&lt;/label&gt;
+&lt;select id="cars" name="cars"&gt;
+  &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+  &lt;option value="saab"&gt;Saab&lt;/option&gt;
+  &lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;
+  &lt;option value="audi"&gt;Audi&lt;/option&gt;
+&lt;/select&gt;
+            </pre>
+        </section>
+
+        <section>
+            <h2>Button Tag</h2>
+            <p>The <code>&lt;button&gt;</code> tag creates a clickable button.</p>
+            <pre>
+&lt;button type="submit"&gt;Submit Form&lt;/button&gt;
+&lt;button type="reset"&gt;Reset Form&lt;/button&gt;
+&lt;button type="button"&gt;Regular Button&lt;/button&gt;
+            </pre>
+        </section>
+
+        <section>
+            <h2>Required Attribute</h2>
+            <p>The <code>required</code> attribute specifies that an input field must be filled out.</p>
+            <pre>
+&lt;input type="text" name="username" required&gt;
+            </pre>
+        </section>
+
+        <section>
+            <h2>Complete Form Example</h2>
+            <form>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" required><br><br>
+                    
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" required><br><br>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br><br>
+                    
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br><br>
+                    
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday"><br><br>
+                    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone"><br><br>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Preferences</legend>
+                    
+                    <label for="bio">Bio:</label><br>
+                    <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br><br>
+                    
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="usa">United States</option>
+                        <option value="canada">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="australia">Australia</option>
+                    </select><br><br>
+                    
+                    <label>Interests:</label><br>
+                    <input type="checkbox" id="coding" name="interests" value="coding">
+                    <label for="coding">Coding</label><br>
+                    <input type="checkbox" id="reading" name="interests" value="reading">
+                    <label for="reading">Reading</label><br>
+                    <input type="checkbox" id="sports" name="interests" value="sports">
+                    <label for="sports">Sports</label><br><br>
+                    
+                    <label for="avatar">Upload Avatar:</label>
+                    <input type="file" id="avatar" name="avatar"><br><br>
+                </fieldset>
+                
+                <button type="submit">Register</button>
+                <button type="reset">Clear Form</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Homework</h2>
+            <p>Create a registration form with the following fields:</p>
+            <ul>
+                <li>Name (text input, required)</li>
+                <li>Email (email input, required)</li>
+                <li>Password (password input, required)</li>
+                <li>Gender (radio buttons with at least 3 options)</li>
+                <li>Date of Birth (date input)</li>
+                <li>Country (dropdown with at least 5 options)</li>
+                <li>Interests (checkboxes with at least 4 options)</li>
+                <li>Profile picture (file input)</li>
+                <li>About me (textarea)</li>
+                <li>Submit and reset buttons</li>
+            </ul>
+            <p>Make sure to use proper labels and the required attribute where appropriate.</p>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Wrapping Up</h2>
+        <p>HTML forms are essential for collecting user input on websites.</p>
+        <p>Practice creating different types of forms to become proficient in form design and implementation.</p>
+          <center>
+        <p><strong>Progress:</strong></p>
+        <progress value="5" max="6">5/6</progress>
+
+        <p>Lecture 5 Complete • <a href="index.html">Home</a> | <a href="lecture6.html">Next →</a></p></center>
+    </footer>
+</body>
+</html>

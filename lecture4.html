@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML File Paths and Structure</title>
+</head>
+
+<body>
+    <header>
+        <h1>Lecture 4:File Path in HTML </h1>
+        <p><a href="index.html">← Back to Home</a></p>
+    </header>
+
+    <nav>
+        <a href="lecture1.html">1</a> |
+        <a href="lecture2.html">2</a> |
+        <a href="lecture3.html">3</a> |
+        <a href="lecture4.html">4</a> |
+        <a href="lecture5.html">5</a> |
+        <a href="lecture6.html">6</a>
+    </nav>
+    <header>
+        <h1>HTML File Paths and Structure</h1>
+        <p>Understanding file paths, boilerplate code, and semantic HTML</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>In web development, understanding how to properly reference files and structure your HTML is crucial for
+                creating functional websites.</p>
+        </section>
+
+        <section>
+            <h2>Understanding File Paths</h2>
+            <p>File paths are used to link to external resources like images, stylesheets, scripts, and other HTML
+                pages.</p>
+            <p>They specify the location of a file in a website's folder structure.</p>
+        </section>
+
+        <section>
+            <h2>Types of File Paths</h2>
+            <p>There are two main types of file paths:</p>
+            <ul>
+                <li><strong>Relative Paths</strong> - Points to a file relative to the current page</li>
+                <li><strong>Absolute Paths</strong> - Points to a file using the complete URL</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Relative Path</h2>
+            <p>Relative paths are defined based on the current document's location.</p>
+            <h3>Examples:</h3>
+            <ul>
+                <li>Same folder: <code>"image.jpg"</code></li>
+                <li>In a subfolder: <code>"images/picture.jpg"</code></li>
+                <li>One folder up: <code>"../style.css"</code></li>
+                <li>Multiple levels up: <code>"../../script.js"</code></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Code Example - Relative Paths</h2>
+            <p>Here's how you might use relative paths in your HTML:</p>
+            <pre>
+&lt;!-- Image in same directory --&gt;
+&lt;img src="logo.png" alt="Company Logo"&gt;
+
+&lt;!-- Image in a subdirectory --&gt;
+&lt;img src="images/photo.jpg" alt="A beautiful landscape"&gt;
+
+&lt;!-- CSS file one level up --&gt;
+&lt;link rel="stylesheet" href="../styles/main.css"&gt;
+
+&lt;-- JavaScript file two levels up --&gt;
+&lt;script src="../../js/script.js"&gt;&lt;/script&gt;
+            </pre>
+        </section>
+
+        <section>
+            <h2>Absolute Path</h2>
+            <p>Absolute paths contain the complete address to a file, including the domain name.</p>
+            <h3>Examples:</h3>
+            <ul>
+                <li><code>"https://www.example.com/images/pic.jpg"</code></li>
+                <li><code>"/images/picture.png"</code> (root-relative)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Note on Absolute Paths</h2>
+            <p>Absolute paths are useful when:</p>
+            <ul>
+                <li>Linking to external resources on other websites</li>
+                <li>When you need to ensure the path doesn't break when moving files</li>
+            </ul>
+            <p>However, they can cause issues if the domain changes or if you're working offline.</p>
+        </section>
+
+        <section>
+            <h2>Note on Relative Paths</h2>
+            <p>Relative paths are beneficial because:</p>
+            <ul>
+                <li>They make your site more portable</li>
+                <li>They work on localhost without changes</li>
+                <li>They're shorter and easier to read</li>
+            </ul>
+            <p>But they can break if you move files without updating the paths.</p>
+        </section>
+
+        <section>
+            <h2>Why Use Boilerplate Code</h2>
+            <p>HTML boilerplate provides a basic template that includes:</p>
+            <ul>
+                <li>DOCTYPE declaration</li>
+                <li>HTML structure with head and body</li>
+                <li>Essential meta tags</li>
+                <li>Character encoding specification</li>
+            </ul>
+            <p>This ensures your HTML document follows standards and works consistently across browsers.</p>
+        </section>
+
+        <section>
+            <h2>Understanding Boilerplate Code</h2>
+            <p>A standard HTML5 boilerplate looks like this:</p>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    <!-- Content goes here -->
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+        </section>
+
+        <section>
+            <h2>UTF-8</h2>
+            <p>UTF-8 is a character encoding that supports all characters and symbols in Unicode.</p>
+            <p>It's the recommended encoding for web pages because it covers almost all characters from all human
+                languages.</p>
+        </section>
+
+        <section>
+            <h2>ASCII Values</h2>
+            <p>ASCII (American Standard Code for Information Interchange) was the original character encoding for the
+                web.</p>
+            <p>It uses 7 bits to represent 128 characters, including English letters, digits, and punctuation.</p>
+            <p>However, ASCII is limited and doesn't support international characters.</p>
+        </section>
+
+        <section>
+            <h2>Why Use UTF-8</h2>
+            <p>UTF-8 has become the standard because:</p>
+            <ul>
+                <li>It supports all Unicode characters</li>
+                <li>It's compatible with ASCII (first 128 characters are the same)</li>
+                <li>It's efficient for storage and transmission</li>
+                <li>It supports multiple languages and special characters</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>div tag</h2>
+            <p>The <code>&lt;div&gt;</code> tag is a generic container for flow content.</p>
+            <p>It has no inherent meaning and is used to group elements for styling purposes.</p>
+            <h3>Example:</h3>
+            <pre>
+&lt;div&gt;
+    &lt;h3&gt;Section Title&lt;/h3&gt;
+    &lt;p&gt;Some content here&lt;/p&gt;
+&lt;/div&gt;
+            </pre>
+        </section>
+
+        <section>
+            <h2>class & id</h2>
+            <p>HTML elements can have class and id attributes for styling and JavaScript manipulation.</p>
+
+            <h3>id Attribute</h3>
+            <ul>
+                <li>Must be unique within the document</li>
+                <li>Used to identify a single element</li>
+                <li>Example: <code>&lt;div id="header"&gt;</code></li>
+            </ul>
+
+            <h3>class Attribute</h3>
+            <ul>
+                <li>Can be used on multiple elements</li>
+                <li>Used to group similar elements</li>
+                <li>Example: <code>&lt;p class="highlight"&gt;</code></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Header, Main & Footer</h2>
+            <p>HTML5 introduced semantic elements that define different parts of a web page:</p>
+
+            <h3>&lt;header&gt;</h3>
+            <p>Represents introductory content, typically containing navigational aids or logos.</p>
+
+            <h3>&lt;main&gt;</h3>
+            <p>Contains the dominant content of the document.</p>
+
+            <h3>&lt;footer&gt;</h3>
+            <p>Represents a footer for its nearest section, typically containing authorship information, copyright, etc.
+            </p>
+
+            <h3>Example Structure:</h3>
+            <pre>
+&lt;header&gt;
+    &lt;h1&gt;Website Title&lt;/h1&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+    &lt;article&gt;...&lt;/article&gt;
+    &lt;aside&gt;...&lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer&gt;
+    &lt;p&gt;Copyright Info&lt;/p&gt;
+&lt;/footer&gt;
+            </pre>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Wrapping Up</h2>
+        <p>Understanding file paths, HTML structure, and semantic elements is fundamental to web development.</p>
+        <p>Practice using relative and absolute paths correctly, and always use the HTML5 boilerplate as a starting
+            point for your projects.</p>
+
+
+        
+
+        <p>Lecture 4 Complete • <a href="index.html">Home</a> | <a href="lecture5.html">Next →</a></p>
+        <center>
+        <p><strong>Progress:</strong></p>
+        <progress value="4" max="6">4/6</progress></center>
+
+    </footer>
+    </footer>
+</body>
+
+</html>

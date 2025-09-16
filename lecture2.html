@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lecture 2 — Introduction to HTML</title>
+</head>
+
+<body>
+    <header>
+        <h1>Lecture 2: Introduction to HTML</h1>
+        <p><a href="index.html">← Back to Home</a></p>
+    </header>
+
+    <nav>
+        <a href="lecture1.html">1</a> |
+        <a href="lecture2.html">2</a> |
+        <a href="lecture3.html">3</a> |
+        <a href="lecture4.html">4</a> |
+        <a href="lecture5.html">5</a> |
+        <a href="lecture6.html">6</a>
+    </nav>
+
+    <section>
+        <h2>📖 Topics</h2>
+        <p>Explore Lecture 2 concepts (click each section):</p>
+
+        <details>
+            <summary>1 — What is HTML?</summary>
+            <p>HTML stands for <strong>HyperText Markup Language</strong>. It is the backbone of every web page.  
+            - <strong>HyperText</strong> means linking one document to another.  
+            - <strong>Markup</strong> means using tags to structure content.  
+            - <strong>Language</strong> means rules or syntax to write code.  
+            In short, HTML provides structure, not style or functionality.</p>
+        </details>
+
+        <details>
+            <summary>2 — World’s First Website</summary>
+            <p>The first website was created in 1991 by <em>Tim Berners-Lee</em> at CERN.  
+            It explained how the World Wide Web works and how to create web pages using HTML.  
+            This site is still live today.</p>
+            <a href="http://info.cern.ch" target="_blank">Visit the First Website</a>
+        </details>
+
+        <details>
+            <summary>3 — The Concept of Hyperlinks</summary>
+            <p>Hyperlinks are connections between web pages. Clicking a link takes you to another page or section.  
+            Example:</p>
+            <pre>&lt;a href="page.html"&gt;Click Me&lt;/a&gt;</pre>
+            <p>Here, <code>href</code> is the attribute that stores the destination URL.</p>
+        </details>
+
+        <details>
+            <summary>4 — What is a Markup Language?</summary>
+            <p>A markup language uses <strong>tags</strong> to give meaning and structure to text.  
+            Example: <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code>  
+            Browser doesn’t show tags, only interprets them to format content.</p>
+        </details>
+
+        <details>
+            <summary>5 — Installing & Setting Up a Code Editor</summary>
+            <p>Popular editors include:  
+            - <strong>VS Code</strong>: most widely used, supports extensions.  
+            - <strong>Sublime</strong>: lightweight and fast.  
+            - <strong>Notepad++</strong>: simple editor, good for beginners.  
+            You can even start with basic Notepad, but editors make coding faster and easier.</p>
+        </details>
+
+        <details>
+            <summary>6 — Creating Your First Webpage</summary>
+            <p>The basic HTML structure looks like this:</p>
+            <pre>
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    Hello World!
+  &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+            <p>This creates a simple page showing "Hello World!" in the browser.</p>
+        </details>
+
+        <details>
+            <summary>7 — Understanding Tags</summary>
+            <p>Tags define elements. Most come in pairs:  
+            Example: <code>&lt;p&gt;content&lt;/p&gt;</code>.  
+            Some tags are <strong>self-closing</strong> like <code>&lt;br&gt;</code> or <code>&lt;hr&gt;</code>.</p>
+        </details>
+
+        <details>
+            <summary>8 — What is Heading?</summary>
+            <p>Headings are used for titles and sub-titles. They make content structured.  
+            <h1>Main Heading</h1>
+            <h2>Subheading</h2>
+            <p>Always use <code>&lt;h1&gt;</code> only once per page for the main title.</p>
+        </details>
+
+        <details>
+            <summary>9 — Paragraph Tag (Quick Example)</summary>
+            <p>Paragraphs represent blocks of text. Example:  
+            <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code></p>
+        </details>
+
+        <details>
+            <summary>10 — Types of Heading Tags</summary>
+            <p>HTML has six heading levels:</p>
+            <h1>H1</h1>
+            <h2>H2</h2>
+            <h3>H3</h3>
+            <h4>H4</h4>
+            <h5>H5</h5>
+            <h6>H6</h6>
+        </details>
+
+        <details>
+            <summary>11 — The Paragraph Tag</summary>
+            <p>Use <code>&lt;p&gt;</code> for writing paragraphs.  
+            They are block-level elements, meaning they start on a new line automatically.</p>
+        </details>
+
+        <details>
+            <summary>12 — What is an Element?</summary>
+            <p>An element = <strong>Opening Tag + Content + Closing Tag</strong>.  
+            Example: <code>&lt;h1&gt;Hello&lt;/h1&gt;</code> is an element.</p>
+        </details>
+
+        <details>
+            <summary>13 — Horizontal Rule (hr)</summary>
+            <p>The <code>&lt;hr&gt;</code> tag is used to create a horizontal line. It’s self-closing and is often used to separate sections.</p>
+            <hr>
+        </details>
+
+        <details>
+            <summary>14 — Line Break (br)</summary>
+            <p>The <code>&lt;br&gt;</code> tag forces text to break into the next line. Example:</p>
+            <p>Hello&lt;br&gt;World</p>
+            <p>Output:</p>
+            Hello<br>World
+        </details>
+
+        <details>
+            <summary>15 — Introduction to HTML Lists</summary>
+            <p>Lists organize content into points. HTML supports two main types:  
+            - Unordered (bulleted)  
+            - Ordered (numbered)</p>
+        </details>
+
+        <details>
+            <summary>16 — Types of Lists</summary>
+            <p><strong>Unordered List:</strong></p>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+            <p><strong>Ordered List:</strong></p>
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ol>
+        </details>
+
+        <details>
+            <summary>17 — Creating Hyperlinks</summary>
+            <p>Links are created using the <code>&lt;a&gt;</code> tag. Example:</p>
+            <pre>&lt;a href="https://google.com"&gt;Google&lt;/a&gt;</pre>
+            <a href="https://google.com" target="_blank">Google</a>
+        </details>
+
+        <details>
+            <summary>18 — Adding Comments in HTML</summary>
+            <p>Comments help explain code but are ignored by the browser. Example:</p>
+            <pre>&lt;!-- This is a comment --&gt;</pre>
+        </details>
+
+        <details>
+            <summary>19 — The Anchor Tag (a)</summary>
+            <p>The <code>&lt;a&gt;</code> tag defines a hyperlink. It always includes an <code>href</code> attribute for destination URL.  
+            It can also open links in new tab using <code>target="_blank"</code>.</p>
+        </details>
+
+        <details>
+            <summary>20 — Attributes Explained</summary>
+            <p>Attributes provide extra information about elements. They are always written inside the opening tag.  
+            Example: <code>&lt;img src="pic.jpg" alt="My Image"&gt;</code></p>
+        </details>
+
+        <details>
+            <summary>21 — Adding Images (img)</summary>
+            <p>The <code>&lt;img&gt;</code> tag is used to display images. Important attributes:  
+            - <strong>src</strong>: path of image  
+            - <strong>alt</strong>: alternative text (for accessibility)  
+            - <strong>width</strong> & <strong>height</strong>: dimensions</p>
+            <figure>
+                <img width="600" height="400" src="https://appxcontent.kaxa.in/paid_course3/2024-09-06-0.5301963883377161.jpg" alt="Sample Image">
+                <figcaption>Example of &lt;img&gt; tag</figcaption>
+            </figure>
+        </details>
+
+        <details>
+            <summary>22 — Mini Project</summary>
+            <p>Task: Create a simple HTML page with these:  
+            - A heading  
+            - A paragraph  
+            - An ordered/unordered list  
+            - A hyperlink  
+            - An image</p>
+        </details>
+
+        <details>
+            <summary>23 — Wrapping </summary>
+            <p>Congratulations 🎉 You completed Lecture 2!  
+            You now know the basics of HTML structure, tags, attributes, and elements.</p>
+        </details>
+
+        
+    </section>
+
+    <footer>
+        <p>Lecture 2 Complete • <a href="index.html">Home</a> | <a href="lecture3.html">Next →</a></p>
+        <center><p><strong>Progress:</strong></p>
+        <progress value="2" max="6">2/6</progress></center>
+    </footer>
+</body>
+
+</html>

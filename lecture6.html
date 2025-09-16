@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Media and Multi-Page Websites</title>
+</head>
+
+<body>
+    <header>
+        <h1>HTML Media and Multi-Page Websites</h1>
+        <p>Learn how to work with media elements and create multi-page websites</p>
+        <p><a href="index.html">← Back to Home</a></p>
+    </header>
+
+    <nav>
+        <a href="lecture1.html">1</a> |
+        <a href="lecture2.html">2</a> |
+        <a href="lecture3.html">3</a> |
+        <a href="lecture4.html">4</a> |
+        <a href="lecture5.html">5</a> |
+        <a href="lecture6.html">6</a>
+    </nav>
+    <header>
+        <br>
+        <br>
+        <nav>
+            <a href="#media">Media Tags</a> |
+            <a href="#audio">Audio</a> |
+            <a href="#video">Video</a> |
+            <a href="#youtube">YouTube Videos</a> |
+            <a href="#multipage">Multi-Page Websites</a> |
+            <a href="#deployment">Deployment</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="media">
+            <h2>Media Tags</h2>
+            <p>HTML provides special tags for embedding audio and video content directly into web pages.</p>
+            <p>The <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> tags make it easy to include media without
+                needing external plugins.</p>
+        </section>
+
+        <section id="audio">
+            <h2>Integrating Audio Files</h2>
+            <p>Use the <code>&lt;audio&gt;</code> tag to embed audio content:</p>
+            <pre>
+&lt;audio src="audiofile.mp3"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+            </pre>
+
+            <h3>Adding Controls to Audio</h3>
+            <p>Add the <code>controls</code> attribute to show playback controls:</p>
+            <pre>
+&lt;audio src="audiofile.mp3" controls&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+            </pre>
+
+            <h3>Audio Example with Controls</h3>
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <h3>Audio: Proper Formats</h3>
+            <p>Different browsers support different audio formats. Provide multiple sources for compatibility:</p>
+            <ul>
+                <li>MP3 - Widely supported</li>
+                <li>OGG - Open format</li>
+                <li>WAV - Uncompressed, large file size</li>
+            </ul>
+
+            <h3>Why Proper Formats are Needed</h3>
+            <p>Different browsers support different audio formats. By providing multiple sources, you ensure your audio
+                will play across all browsers.</p>
+
+            <pre>
+&lt;audio controls&gt;
+  &lt;source src="audiofile.mp3" type="audio/mpeg"&gt;
+  &lt;source src="audiofile.ogg" type="audio/ogg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+            </pre>
+        </section>
+
+        <section id="video">
+            <h2>Integrating Video Files</h2>
+            <p>Use the <code>&lt;video&gt;</code> tag to embed video content:</p>
+            <pre>
+&lt;video src="videofile.mp4" width="320" height="240" controls&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+            </pre>
+
+            <h3>Video Example with Controls</h3>
+            <video width="320" height="240" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <h3>Video: Proper Formats</h3>
+            <p>Like audio, different browsers support different video formats:</p>
+            <ul>
+                <li>MP4 - Most widely supported</li>
+                <li>WebM - Open format, good quality</li>
+                <li>OGG - Less common for video</li>
+            </ul>
+
+            <h3>Allow Fullscreen in Videos</h3>
+            <p>Add the <code>allowfullscreen</code> attribute to allow fullscreen viewing:</p>
+            <pre>
+&lt;video src="videofile.mp4" controls allowfullscreen&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+            </pre>
+
+            <h3>Autoplay Feature</h3>
+            <p>Use the <code>autoplay</code> attribute to play media automatically (use sparingly):</p>
+            <pre>
+&lt;video src="videofile.mp4" autoplay muted&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+            </pre>
+            <p>Note: Most browsers require the <code>muted</code> attribute for autoplay to work.</p>
+        </section>
+
+        <section id="youtube">
+            <h2>Embedding YouTube Videos</h2>
+            <p>You can embed YouTube videos using the <code>&lt;iframe&gt;</code> tag:</p>
+            <pre>
+&lt;iframe width="560" height="315" 
+src="https://www.youtube.com/embed/VIDEO_ID" 
+frameborder="0" allowfullscreen&gt;
+&lt;/iframe&gt;
+            </pre>
+
+            <h3>YouTube Embed Example</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eUfzneMLOcY?si=gdGLl9QZF4oPOl7W"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <h3>Embed Tag & Its Importance</h3>
+            <p>The <code>&lt;embed&gt;</code> tag is an older way to embed external content, but
+                <code>&lt;iframe&gt;</code> is now more commonly used.
+            </p>
+            <p>Embedding allows you to include content from other websites while keeping users on your site.</p>
+        </section>
+
+        <section>
+            <h2>Combining iframes with Tables</h2>
+            <p>You can use tables to create layouts with embedded content:</p>
+            <table border="1">
+                <tr>
+                    <td>
+                        <iframe width="200" height="305"
+                            src="https://www.youtube.com/embed/NGYp1zCBthk?si=R5YrW5TJ6QV7AlNm"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </td>
+                    <td>
+                        <video width="200" height="150" controls>
+                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <audio controls>
+                            <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="multipage">
+            <h2>Multi-Page Websites</h2>
+            <p>Most websites consist of multiple HTML pages linked together.</p>
+
+            <h3>Creating Multi-Page Websites</h3>
+            <p>Create separate HTML files for each page and link them together using the <code>&lt;a&gt;</code> tag:</p>
+            <pre>
+&lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+            </pre>
+
+            <h3>Header Section</h3>
+            <p>The header typically contains the site logo and navigation menu:</p>
+            <pre>
+&lt;header&gt;
+  &lt;h1&gt;My Website&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href="index.html"&gt;Home&lt;/a&gt;
+    &lt;a href="about.html"&gt;About&lt;/a&gt;
+    &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+            </pre>
+
+            <h3>Main Section</h3>
+            <p>The main content area contains the unique content for each page:</p>
+            <pre>
+&lt;main&gt;
+  &lt;h2&gt;Welcome to Our Website&lt;/h2&gt;
+  &lt;p&gt;This is the home page content.&lt;/p&gt;
+&lt;/main&gt;
+            </pre>
+
+            <h3>Footer Section</h3>
+            <p>The footer typically contains copyright information and additional links:</p>
+            <pre>
+&lt;footer&gt;
+  &lt;p&gt;&amp;copy; 2023 My Website. All rights reserved.&lt;/p&gt;
+&lt;/footer&gt;
+            </pre>
+
+            <h3>Creating Copyright Symbol</h3>
+            <p>Use the HTML entity <code>&amp;copy;</code> to create the copyright symbol: &copy;</p>
+        </section>
+
+        <section id="deployment">
+            <h2>Deploying a Website on Netlify</h2>
+            <p>Netlify is a popular platform for deploying static websites.</p>
+
+            <h3>Steps to Deploy on Netlify:</h3>
+            <ol>
+                <li>Create a Netlify account at <a href="https://www.netlify.com/">netlify.com</a></li>
+                <li>Drag and drop your website folder onto the Netlify deployment area</li>
+                <li>Or connect your GitHub repository for automatic deployments</li>
+                <li>Netlify will provide you with a unique URL for your website</li>
+                <li>You can customize the domain name in the site settings</li>
+            </ol>
+
+            <h3>Benefits of Using Netlify:</h3>
+            <ul>
+                <li>Free for basic usage</li>
+                <li>Automatic deployments from Git</li>
+                <li>SSL certificates included</li>
+                <li>Global CDN for fast loading</li>
+                <li>Form handling and serverless functions</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+
+
+
+        <p>You've learned how to work with media elements, create multi-page websites, and deploy your site to Netlify.
+        </p>
+        <p>Practice these skills to create engaging, media-rich websites that you can share with the world.</p>
+        <p>&copy; 2023 HTML Tutorial. All rights reserved.</p>
+        <p>Lecture 6 Complete • <a href="index.html">Home</a> | <a href="lecture1.html">Next →</a></p>
+        <center>
+            <h2>Congratulations🥇🥇🥇</h2>
+            <p><strong>Progress:</strong></p>
+            <progress value="6" max="6">6/6</progress>
+        </center>
+    </footer>
+</body>
+
+</html>

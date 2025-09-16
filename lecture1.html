@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lec-1 Internet Fundamentals and Web Development</title>
+</head>
+
+<body>
+  <header>
+    <h1>Lecture 1: Internet Fundamentals and Web Development</h1>
+    <p>Understanding how the internet works and the basics of web development</p>
+    <p><a href="index.html">← Back to Home</a></p>
+  
+  <nav>
+    <a href="lecture1.html">1</a> |
+    <a href="lecture2.html">2</a> |
+    <a href="lecture3.html">3</a> |
+    <a href="lecture4.html">4</a> |
+    <a href="lecture5.html">5</a> |
+    <a href="lecture6.html">6</a>
+  </nav>
+  </header>
+
+  <header>
+
+    <nav>
+      <ul>
+        <li><a href="#internet">What is the Internet?</a></li>
+        <li><a href="#data-transfer">Data Transfer</a></li>
+        <li><a href="#ip-address">IP Address</a></li>
+        <li><a href="#dns">DNS</a></li>
+        <li><a href="#mac">MAC Address</a></li>
+        <li><a href="#ports">Port Numbers</a></li>
+        <li><a href="#ipv4-ipv6">IPv4 & IPv6</a></li>
+        <li><a href="#lan">LAN & Networking</a></li>
+        <li><a href="#vpn">VPN</a></li>
+        <li><a href="#web-dev">Web Development</a></li>
+        <li><a href="#mern">MERN Stack</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="internet">
+      <h2>What is the Internet?</h2>
+      <p>The internet is a global network of interconnected computers that communicate using standardized protocols.</p>
+      <p>It allows for the sharing of information and resources across vast distances.</p>
+    </section>
+
+    <section id="data-transfer">
+      <h2>How is Data Transferred?</h2>
+      <p>Data is transferred over the internet using packet switching technology.</p>
+      <p>Information is broken down into small packets, sent individually across the network, and reassembled at the
+        destination.</p>
+      <p>This process uses protocols like TCP/IP to ensure reliable delivery.</p>
+    </section>
+
+    <section id="ip-address">
+      <h2>What is an IP Address?</h2>
+      <p>An IP (Internet Protocol) address is a unique numerical identifier assigned to each device connected to a
+        network.</p>
+      <p>It serves two main functions:</p>
+      <ol>
+        <li>Network interface identification</li>
+        <li>Location addressing</li>
+      </ol>
+      <p>Example IP address: <code>192.168.1.1</code></p>
+
+      <h3>How to Access a Website</h3>
+      <p>When you type a website address (URL) into your browser:</p>
+      <ol>
+        <li>Your browser contacts a DNS server to translate the domain name to an IP address</li>
+        <li>A connection is established with the server at that IP address</li>
+        <li>The server sends the requested web page back to your browser</li>
+        <li>Your browser renders the web page for you to view</li>
+      </ol>
+
+      <h3>Who Assigns the IP Address?</h3>
+      <p>IP addresses are assigned by:</p>
+      <ul>
+        <li>ICANN (Internet Corporation for Assigned Names and Numbers) - globally</li>
+        <li>ISPs (Internet Service Providers) - to end users</li>
+        <li>Network administrators - within private networks</li>
+      </ul>
+    </section>
+
+    <section id="dns">
+      <h2>Concept of DNS</h2>
+      <p>DNS (Domain Name System) is often called the "phonebook of the internet."</p>
+      <p>It translates human-friendly domain names (like www.example.com) into IP addresses that computers use to
+        identify each other.</p>
+
+      <h3>In-depth Working of DNS</h3>
+      <p>The DNS resolution process involves multiple steps:</p>
+      <ol>
+        <li>Check browser cache</li>
+        <li>Check operating system cache</li>
+        <li>Check router cache</li>
+        <li>Check ISP's DNS servers</li>
+        <li>Recursive search through DNS hierarchy if needed</li>
+      </ol>
+      <p>This process happens in milliseconds to quickly resolve domain names to IP addresses.</p>
+    </section>
+
+    <section id="mac">
+      <h2>Problems in Data Transfer and MAC Address</h2>
+      <p>During data transfer, several issues can occur:</p>
+      <ul>
+        <li>Packet loss</li>
+        <li>Network congestion</li>
+        <li>Data corruption</li>
+        <li>Routing errors</li>
+      </ul>
+
+      <h3>MAC Address</h3>
+      <p>A MAC (Media Access Control) address is a unique identifier assigned to a network interface controller.</p>
+      <p>Unlike IP addresses, MAC addresses are permanently assigned to hardware during manufacturing.</p>
+
+      <h4>MAC Address Format</h4>
+      <p>MAC addresses are 48-bit addresses typically represented as six groups of two hexadecimal digits.</p>
+      <p>Example: <code>00:1A:2B:3C:4D:5E</code></p>
+      <p>The first three octets represent the manufacturer identifier, while the last three are device-specific.</p>
+    </section>
+
+    <section id="ports">
+      <h2>What are Port Numbers?</h2>
+      <p>Port numbers are 16-bit numbers used to identify specific processes or services on a device.</p>
+      <p>They allow a single device to host multiple network services simultaneously.</p>
+
+      <h3>Common Port Numbers</h3>
+      <ul>
+        <li>Port 80: HTTP (Web traffic)</li>
+        <li>Port 443: HTTPS (Secure web traffic)</li>
+        <li>Port 25: SMTP (Email)</li>
+        <li>Port 22: SSH (Secure shell)</li>
+      </ul>
+
+      <h3>Port Number Format</h3>
+      <p>Port numbers range from 0 to 65535, divided into three categories:</p>
+      <ol>
+        <li>Well-known ports (0-1023)</li>
+        <li>Registered ports (1024-49151)</li>
+        <li>Dynamic/private ports (49152-65535)</li>
+      </ol>
+    </section>
+
+    <section id="ipv4-ipv6">
+      <h2>IPv4 & IPv6</h2>
+      <p>IPv4 (Internet Protocol version 4) is the fourth version of the Internet Protocol.</p>
+      <p>It uses 32-bit addresses, allowing for about 4.3 billion unique addresses.</p>
+      <p>Example: <code>192.168.1.1</code></p>
+
+      <h3>IPv6</h3>
+      <p>IPv6 (Internet Protocol version 6) is the most recent version, designed to replace IPv4.</p>
+      <p>It uses 128-bit addresses, allowing for a virtually unlimited number of unique addresses.</p>
+      <p>Example: <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code></p>
+    </section>
+
+    <section id="lan">
+      <h2>Local Area Network, Switch & Router</h2>
+      <p>A LAN (Local Area Network) is a network that connects devices in a limited geographical area.</p>
+
+      <h3>Network Devices</h3>
+      <p><strong>Switch:</strong> Connects devices within a LAN and forwards data to the specific device.</p>
+      <p><strong>Router:</strong> Connects different networks together and routes data between them.</p>
+
+      <h3>Public and Private Addresses</h3>
+      <p><strong>Public IP addresses</strong> are routable on the internet and unique globally.</p>
+      <p><strong>Private IP addresses</strong> are used within private networks and are not routable on the internet.
+      </p>
+      <p>Common private IP ranges:</p>
+      <ul>
+        <li>10.0.0.0 - 10.255.255.255</li>
+        <li>172.16.0.0 - 172.31.255.255</li>
+        <li>192.168.0.0 - 192.168.255.255</li>
+      </ul>
+
+      <h3>Modern Routers</h3>
+      <p>Modern routers often combine multiple functions:</p>
+      <ul>
+        <li>Routing between networks</li>
+        <li>Network address translation (NAT)</li>
+        <li>Firewall protection</li>
+        <li>Wireless access point</li>
+        <li>Switch functionality</li>
+      </ul>
+    </section>
+
+    <section id="vpn">
+      <h2>What is a VPN?</h2>
+      <p>A VPN (Virtual Private Network) extends a private network across a public network.</p>
+      <p>It enables users to send and receive data across shared or public networks as if their devices were directly
+        connected to the private network.</p>
+      <p>Benefits of VPNs:</p>
+      <ul>
+        <li>Enhanced security and privacy</li>
+        <li>Bypassing geographic restrictions</li>
+        <li>Secure remote access to network resources</li>
+      </ul>
+    </section>
+
+    <section id="web-dev">
+      <h2>What is Web Development?</h2>
+      <p>Web development is the work involved in developing websites for the internet or an intranet.</p>
+      <p>It can range from developing simple static web pages to complex web applications.</p>
+
+      <h3>Front-end vs. Back-end</h3>
+      <p><strong>Front-end development</strong> involves creating what users see and interact with in their browsers.
+      </p>
+      <p><strong>Back-end development</strong> involves server-side programming and database management.</p>
+    </section>
+
+    <section id="mern">
+      <h2>What is the MERN Stack?</h2>
+      <p>The MERN stack is a popular JavaScript-based technology stack for building web applications.</p>
+      <p>MERN stands for:</p>
+      <ul>
+        <li><strong>M</strong>ongoDB - A NoSQL database</li>
+        <li><strong>E</strong>xpress.js - A web application framework for Node.js</li>
+        <li><strong>R</strong>eact - A JavaScript library for building user interfaces</li>
+        <li><strong>N</strong>ode.js - A JavaScript runtime environment</li>
+      </ul>
+
+      <h3>Who is a Full-Stack Developer?</h3>
+      <p>A full-stack developer is proficient in both front-end and back-end development.</p>
+      <p>They can work with databases, servers, systems engineering, and client-side user interfaces.</p>
+    </section>
+  </main>
+
+  <footer>
+    <h2>Wrapping Up</h2>
+    <p>Understanding internet fundamentals is crucial for web development.</p>
+    <p>From how data travels across networks to how websites are built, these concepts form the foundation of modern web
+      technologies.</p>
+    <p>Whether you're focusing on front-end, back-end, or full-stack development, this knowledge will help you build
+      better, more efficient web applications.</p>
+    <p><strong>Progress:</strong></p>
+    <progress value="1" max="6">1/6</progress>
+
+
+    <p>Lecture 1 Complete • <a href="index.html">Home</a> | <a href="lecture2.html">Next →</a></p>
+
+  </footer>
+</body>
+
+</html>
